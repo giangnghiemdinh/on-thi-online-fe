@@ -1,0 +1,57 @@
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-login100">
+      <div class="login100-pic js-tilt d-flex align-items-center" data-tilt>
+        <img src="assets/images/img-01.png" alt="IMG">
+      </div>
+
+      <form class="login100-form validate-form" [formGroup]="loginForm" name="loginForm" (ngSubmit)="onLogin(loginForm)">
+					<span class="login100-form-title">
+            Đăng nhập
+					</span>
+
+        <div class="wrap-input100 validate-input" [ngClass]="displayFieldCss('username')" data-validate="Username invalid!">
+          <input class="input100" type="text" name="username" placeholder="Tài khoản" formControlName="username">
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+							<i class="fa fa-user-circle-o" aria-hidden="true"></i>
+          </span>
+        </div>
+
+        <div class="wrap-input100 validate-input" [ngClass]="displayFieldCss('password')" data-validate="Password invalid!">
+          <input class="input100" type="password" name="pass" placeholder="Mật khẩu" formControlName="password">
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+        </div>
+
+        <div class="container-login100-form-btn">
+          <button type="submit" class="login100-form-btn">
+            Đăng nhập
+          </button>
+        </div>
+
+        <div class="text-center" style="padding-top: 12px;">
+						<span class="txt1">
+							Quên
+						</span>
+          <span class="txt2">
+            mật khẩu?
+          </span>
+        </div>
+
+        <div class="text-center" style="padding-top: 50px">
+          <span class="txt1">
+            Không có tài khoản?
+          </span>
+          <span class="txt2" (click)="openRegisterDialog()">
+            đăng kí ngay
+            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+          </span>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
